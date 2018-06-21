@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr" >
-  <head>
-    <meta charset="utf-8" />
-    <title>Exo 3</title>
-  </head>
-  <body>
-    <script>
-//Déclaration des variables, demande et assignation de leurs valeurs
-    var firstname = prompt('Entrez votre prénom :');
-    var lastname = prompt('Entrez votre nom :');
-    var city = prompt('Entrez votre ville :');
-//Affichage
-    alert('Bonjour ' + firstname + ' ' + lastname + ' ' + city);
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Exo 4</title>
+</head>
+<body>
+  <form>
+    <label for="lastname">Nom : </label><input type="text" name="lastname" id="lastname"/>
+    <label for="firstname">Prénom : </label><input type="text" name="firstname" id="firstname"/>
+    <label for="city">Ville : </label><input type="text" name="city" id="city"/>
+    <button name="submit" id="submit" onclick="identity()">Valider</button>
+  </form>
+  <script>
+  //declaration de fonction
+function identity() {
+//declaration des variables
+var lastname = document.getElementById('lastname').value;
+var firstname = document.getElementById('firstname').value;
+var city = document.getElementById('city').value;
+var regex = /^[a-zA-Z\-éèêëïäîç]+$/;
+//Boite de dialogue avec appel des variables
+if((regex.test(lastname) == true) && (regex.test(firstname) == true) && (regex.test(city) == true) ){
+alert('Nom: ' + lastname + '\nPrenom: ' + firstname + '\nVille: ' + city);
+}else{
+alert('Ne pas utiliser de chiffres ou de caractères spéciaux.');
+}
+}
+  </script>
+</body>
 </html>
- 
