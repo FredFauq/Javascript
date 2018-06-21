@@ -5,14 +5,13 @@
     <title>Exo 7</title>
   </head>
   <body>
-    <script>
-    //Déclaration, demande et assignation des variables
-    var pointure = prompt('Entrez votre pointure : ');
-    var  year = prompt('Entrez voter année de naissance : ');
-    //Conversion des variables chaînes de caractère en nombre et opération
-    result = (((parseInt(pointure) * 2) + 5) * 50) - parseInt(year) + 1766;
-    //Affichage du résultat
-    alert(result);
-</script>
+    <form>
+      <label for="shoeSize">Pointure : </label><input type="text" id="shoeSize" name="shoeSize"/><br/>
+      <label for="yearOfBirth">Année de naissance : </label><input type="text" id="yearOfBirth" name="yearOfBirth"/><br/>
+      <button id="submit" name="submit" onclick="operation()">Valider</button>
+   </form>
+
+    <script src="script7.js">
+    </script>
   </body>
 </html>
